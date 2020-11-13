@@ -19,24 +19,11 @@ export default {
     subscriptions: {
         // 这里的函数名随意，可以有多个函数
         setup ({ dispatch, history }) {
-            // const currentProduct = {
-            //     name: '玉米1'
-            // }
+            console.log(dispatch)
             window.onresize = () => {
-                // dispatch({
-                //     type: 'updateList',
-                //     payload: currentProduct
-                // })
+                dispatch()
             }
-        },
-
-        setupHistory ({ dispatch, history }) {
-            history.listen((location) => {
-                console.log(location);
-            })
-        },
-
-        hello ({ dispatch, history }) { }
+        }
     },
 
     // 异步操作
