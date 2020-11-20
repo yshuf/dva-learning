@@ -1,7 +1,7 @@
 import React from 'react';
 // 路由 routerRedux 官网 API https://dvajs.com/api/#dva-router ,withRouter源码中可以查阅到
 import { withRouter, Link, routerRedux } from 'dva/router'
-// import * as api from '../services/example'
+import * as api from '../services/example'
 
 
 class Product extends React.Component {
@@ -49,7 +49,7 @@ class Product extends React.Component {
     }
 
     render () {
-        let { productList } = this.props
+        let { productList } = this.props.productList
         return (
             <div>
                 product商品:{this.props.title}

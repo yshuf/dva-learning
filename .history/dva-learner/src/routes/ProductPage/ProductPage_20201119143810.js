@@ -11,7 +11,7 @@ export default class ProductPage extends Component {
     render () {
         let { productList, dispatch, innerText } = this.props;
         return (
-            <div><Product dispatch={dispatch} title='hahah' productList={productList} />{innerText}</div>
+            <div><Product dispatch={dispatch} title='hahah' productList={productList} />{this.props.innerText}</div>
         )
     }
 }

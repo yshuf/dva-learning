@@ -2,16 +2,16 @@ import React, { Component } from 'react';
 import Product from '../../components/Product';
 import { connect } from 'dva';
 
-@connect(({ product }) => ({
-    productList: product.productList,
-    innerText: product.innerText
+@connect(({ state }) => ({
+    productList: state.product
 }))
 export default class ProductPage extends Component {
 
     render () {
         let { productList, dispatch, innerText } = this.props;
+        console.log(this.props)
         return (
-            <div><Product dispatch={dispatch} title='hahah' productList={productList} />{innerText}</div>
+            <div><Product dispatch={dispatch} title='hahah' productList={productList} />{this.props.innerText}</div>
         )
     }
 }
