@@ -11,17 +11,13 @@ import { connect } from 'dva';
 ))
     
 class Product extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state={}
-    }
      
     componentDidMount () {
         // api.gerProduct()
         //     .then(res => {
         //     console.log(res.data)
         // })
-        console.log(this.props,this.props.loading)
+        console.log(this, this.props,)
     }
 
     addProduct = () => {
@@ -51,7 +47,6 @@ class Product extends React.Component {
              type: 'product/updateListAsync',
              params:currentProductList
          })
-
     }
     clickProductListHttp = (event) => {
         this.props.dispatch({
@@ -62,11 +57,8 @@ class Product extends React.Component {
         })
     }
 
-    
     render () {
-        let { productList } = this.props.productList
-        console.log(this.props)
-
+        let { productList } = this.props
         return (
             <div>
                 product商品:{this.props.title}

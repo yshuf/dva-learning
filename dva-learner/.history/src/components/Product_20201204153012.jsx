@@ -1,27 +1,16 @@
 import React from 'react';
 // 路由 routerRedux 官网 API https://dvajs.com/api/#dva-router ,withRouter源码中可以查阅到
 import { withRouter, Link, routerRedux } from 'dva/router'
-import { connect } from 'dva';
 // import * as api from '../services/example'
 
-@connect(({ loading }) => (
-    {
-        loading
-    }
-))
-    
+
 class Product extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state={}
-    }
      
     componentDidMount () {
         // api.gerProduct()
         //     .then(res => {
         //     console.log(res.data)
         // })
-        console.log(this.props,this.props.loading)
     }
 
     addProduct = () => {
@@ -51,7 +40,6 @@ class Product extends React.Component {
              type: 'product/updateListAsync',
              params:currentProductList
          })
-
     }
     clickProductListHttp = (event) => {
         this.props.dispatch({
@@ -62,11 +50,8 @@ class Product extends React.Component {
         })
     }
 
-    
     render () {
-        let { productList } = this.props.productList
-        console.log(this.props)
-
+        let { productList } = this.props
         return (
             <div>
                 product商品:{this.props.title}

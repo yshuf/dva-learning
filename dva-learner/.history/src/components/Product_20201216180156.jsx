@@ -64,9 +64,7 @@ class Product extends React.Component {
 
     
     render () {
-        let { productList } = this.props.productList
-        console.log(this.props)
-
+        let { productList } = this.props
         return (
             <div>
                 product商品:{this.props.title}

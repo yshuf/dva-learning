@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 import Product from '../../components/Product';
 import { connect } from 'dva';
 
-// @connect(({ product: { productList, innerText }, loading }) => ({
-//     productList,
-//     innerText,
-// }))
+@connect(({ product: { productList, innerText }, loading }) => ({
+    productList,
+    innerText,
+}))
 
 // @connect((state) => ({ product: state.product, loading: state.loading }))
-class ProductPage extends Component {
+export default class ProductPage extends Component {
     componentDidMount () {
 
         let generator = function* () {
@@ -36,20 +36,17 @@ class ProductPage extends Component {
     }
 }
 
-const hhaah = (state) => {
-    return {
-        // 找到其命名空间 为 product 下的productList
-        productList: state.product
-    }
-}
+// const mapStateToProps = (state) => {
+//     return {
+//         // 找到其命名空间 为 product 下的productList
+//         productList: state.product
+//     }
+// }
 
-// connect 高阶函数
-export default connect(
-    // (state) => ({
-    // 找到其命名空间 为 product 下的productList
-    // productList: state.product
-    // })
-    hhaah
-)(ProductPage)
+// // connect 高阶函数
+// export default connect((state) => ({
+//     // 找到其命名空间 为 product 下的productList
+//     productList: state.product
+// }))(ProductPage)
 
 

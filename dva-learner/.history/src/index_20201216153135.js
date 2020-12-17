@@ -24,7 +24,7 @@ const app = dva({
 // app.model(require('./models/product').default);
 require("./models").default.forEach(key => app.model(key.default));
 
-app.use(createLoading())
+app.user(createLoading())
 
 // 4. Router
 app.router(require('./router').default);

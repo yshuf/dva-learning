@@ -36,7 +36,7 @@ class ProductPage extends Component {
     }
 }
 
-const hhaah = (state) => {
+const mapStateToProps = (state) => {
     return {
         // 找到其命名空间 为 product 下的productList
         productList: state.product
@@ -49,7 +49,7 @@ export default connect(
     // 找到其命名空间 为 product 下的productList
     // productList: state.product
     // })
-    hhaah
+    mapStateToProps
 )(ProductPage)
 
 

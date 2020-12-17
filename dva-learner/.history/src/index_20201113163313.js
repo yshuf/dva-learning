@@ -1,5 +1,4 @@
 import dva from 'dva';
-import createLoading from 'dva-loading'
 import './index.css';
 // import Router from './router'
 // import creatHistory from 'history/createBrowserHistory';
@@ -23,8 +22,6 @@ const app = dva({
 // app.model(require('./models/example').default);
 // app.model(require('./models/product').default);
 require("./models").default.forEach(key => app.model(key.default));
-
-app.use(createLoading())
 
 // 4. Router
 app.router(require('./router').default);
