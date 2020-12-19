@@ -44,6 +44,7 @@ export default {
     effects: {
         // * ES6新语法，generators提供，返回迭代器，通过yield关键字实现暂停功能。官网 API, https://dvajs.com/knowledgemap/#generators
         *updateListAsync ({ params }, { call, put }) { // eslint-disable-line
+            console.log(this.state)
             // payload 为组件传递过来的参数
             yield put({
                 type: 'updateList',
@@ -67,9 +68,10 @@ export default {
     reducers: {
         // 更新数据
         updateList (state, action) {
+            console.log(state)
             // action 参数
             let currentProductList = deepClone(state);
-            currentProductList.productList.push(action.payload)
+            currentProductList.productList.push(action.params)
             return currentProductList;
         },
     }

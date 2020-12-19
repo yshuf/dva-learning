@@ -69,7 +69,8 @@ export default {
         updateList (state, action) {
             // action 参数
             let currentProductList = deepClone(state);
-            currentProductList.productList.push(action.payload)
+            currentProductList.productList.push(action.params)
+            console.log(currentProductList)
             return currentProductList;
         },
     }

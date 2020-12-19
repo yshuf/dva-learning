@@ -67,9 +67,10 @@ export default {
     reducers: {
         // 更新数据
         updateList (state, action) {
+            console.log(state)
             // action 参数
             let currentProductList = deepClone(state);
-            currentProductList.productList.push(action.payload)
+            currentProductList.productList.push(action.params)
             return currentProductList;
         },
     }

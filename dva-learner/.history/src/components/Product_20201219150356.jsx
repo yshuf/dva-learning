@@ -75,14 +75,14 @@ class Product extends React.Component {
                 <ul>    
                     {productList.map((ele, index) => {
                         console.log(ele)
+                        return 
                         // 实际汇总 key 给数据的唯一标志，不要给index。非常忌讳哦
                         return <li key={index}>{ele.name}</li>
                     })}
                 </ul>
                 <button onClick={this.addProduct}>添加商品</button>
-                <button onClick={this.clickProductListHttp}>获取商品列表Http</button>
                 {/* <button onClick={this.clickProductListAsync}>获取商品列表async</button>
-                
+                <button onClick={this.clickProductListHttp}>获取商品列表Http</button>
                 <Link to='/'>去首页</Link>
                 <button onClick={ this.clickGoToHandler}>去首页</button>
                 <button onClick={ this.clickGoToRouterReduxHandler}>routerRedux去首页</button> */}

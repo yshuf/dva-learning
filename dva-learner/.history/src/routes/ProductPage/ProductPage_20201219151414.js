@@ -11,7 +11,6 @@ import { connect } from 'dva';
 class ProductPage extends Component {
 
     render () {
-        console.log()
         let { productList, dispatch, innerText } = this.props;
         return (
             <div>
@@ -22,11 +21,11 @@ class ProductPage extends Component {
     }
 }
 
-const mapStateToProps = (state) => {
+const hhaah = (state) => {
     return {
         // 找到其命名空间 为 product 下的productList
         productList: state.product,
-        innerText: state.product.innerText
+        innerText: state.innerText
     }
 }
 
@@ -36,7 +35,7 @@ export default connect(
     // 找到其命名空间 为 product 下的productList
     // productList: state.product
     // })
-    mapStateToProps
+    hhaah
 )(ProductPage)
 
 

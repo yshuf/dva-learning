@@ -80,9 +80,8 @@ class Product extends React.Component {
                     })}
                 </ul>
                 <button onClick={this.addProduct}>添加商品</button>
-                <button onClick={this.clickProductListHttp}>获取商品列表Http</button>
                 {/* <button onClick={this.clickProductListAsync}>获取商品列表async</button>
-                
+                // <button onClick={this.clickProductListHttp}>获取商品列表Http</button>
                 <Link to='/'>去首页</Link>
                 <button onClick={ this.clickGoToHandler}>去首页</button>
                 <button onClick={ this.clickGoToRouterReduxHandler}>routerRedux去首页</button> */}
